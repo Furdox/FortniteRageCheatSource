@@ -10,7 +10,7 @@
 #include <no_cheat/Aimbot.h>
 #include <no_cheat/Exploits.h>
 #include <no_cheat/PawnsLoop.h>
-
+string keybind = "VK_F8";
 
 //typedef HRESULT(*present_fn)(IDXGISwapChain*, UINT, UINT);
 //inline present_fn original_present{ };
@@ -225,7 +225,7 @@ HRESULT present_hooked(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags
 	{
 		no_menu::window_input(_("UnrealWindow"), _("Fortnite  "));
 		                             // ur  menu name
-		if (no_menu::begin_window(_("Dildo Rage | 1310's#1310"), no_menu::vec2({ 545, 580 }), VK_INSERT, no_menu::no_menu_window_flags_none))
+		if (no_menu::begin_window(_("Dildo Rage | 1310's#1310"), no_menu::vec2({ 545, 580 }), var(keybind), no_menu::no_menu_window_flags_none))
 		{
 
 			if (tab == 1) { tab1 = true; tab2 = false; tab3 = false; tab4 = false; }
